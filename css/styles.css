@@ -1,0 +1,198 @@
+/* Darker Color Palette */
+:root {
+    --tan: #eae4d1; /* Darker tan for overall background */
+    --mindaro: #e1e176; /* Darkened yellow for accents */
+    --celadon: #9ccf82; /* Darkened celadon for accents */
+    --celadon-2: #8bb692; /* Darkened second celadon */
+    --powder-blue: #7998b0; /* Darkened powder blue for links and accents */
+    --vista-blue: #5e7ca0; /* Darkened vista blue for contrast */
+    --dark-gray: #333; /* Dark gray for main text */
+    --light-gray: #b5b5b5; /* Darker light gray for borders */
+  }
+  
+  /* General Styles */
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--tan);
+    color: var(--dark-gray);
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove any box shadow */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 1.5rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    color: var(--vista-blue);
+  }
+  
+  /* Landing Page (index.html) */
+.landing-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Ensure it takes up the entire viewport height */
+    background: url('../images/landscape.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .content {
+    text-align: center;
+    color: var(--dark-gray);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  
+  .content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin: 0.5rem 0 1.5rem;
+    color: var(--celadon-2);
+  }
+  
+  .landing-nav a {
+    text-decoration: none;
+    color: var(--powder-blue);
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .landing-nav a:hover {
+    color: var(--vista-blue);
+  }
+  
+  /* Diagonal Image Overlay for About Page Only */
+  .diagonal-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background: url('../images/landscape2.jpg') no-repeat center center/cover;
+    clip-path: polygon(0 50%, 0 0, 100% 0, 100% 100%);
+    opacity: 0.6;
+    z-index: -1; /* Ensures the image stays behind the main content */
+  }
+  
+  .about-page .diagonal-image-overlay {
+    display: block; /* Show overlay on about.html */
+  }
+  
+  footer {
+    background-color: transparent;
+    color: var(--dark-gray);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 1px solid var(--light-gray);
+  }
+  
+  /* About Page (about.html) */
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    padding-top: 16rem; /* Adds extra space for the fixed header */
+  }
+  
+  .about-content {
+    flex: 2;
+    margin-right: 2rem;
+  }
+  
+  .profile-sidebar {
+    flex: 1;
+    text-align: center;
+    padding: 2rem;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 170px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-sidebar h2 {
+    font-family: 'Playfair Display', serif;
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .profile-sidebar p {
+    color: var(--celadon-2);
+    font-size: 1.1rem;
+  }
+  
+  .social-links a {
+    text-decoration: none;
+    color: var(--powder-blue);
+    margin: 0 0.5rem;
+    font-weight: bold;
+  }
+  
+  .social-links a:hover {
+    color: var(--vista-blue);
+  }
+  
+  /* Section Styles (for general content consistency) */
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  /* Button and Link Hover Effects */
+  a {
+    color: var(--mindaro);
+  }
+  
+  a:hover {
+    color: var(--celadon);
+  }
+  

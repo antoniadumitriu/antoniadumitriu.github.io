@@ -3,23 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toni Dumitriu - About Me</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Toni Dumitriu - About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="about-page">
   <header>
     <nav>
       <ul>
         <nav class="landing-nav">
-            <a href="index.html">Toni Dumitriu</a>
-            <a href="about.html">About Me</a>
+            <a href="index.html" class="logo">TD</a>
+            <a href="about.html">About</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#skills">Skills</a>
           </nav>
         <li class="social-links">
           <a href="https://github.com/antoniadumitriu" target="_blank"><i class="fab fa-github"></i></a>
           <a href="https://www.linkedin.com/in/tonidumitriu" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:Adumitriu2000@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:adumitriu2000@gmail.com"><i class="fas fa-envelope"></i></a>
         </li>
       </ul>
     </nav>
@@ -30,31 +32,89 @@
   <div class="about-container">
     <div class="about-content">
       <h1>About Me</h1>
-      <p>My interests lie at the intersection of data analysis, sustainability, and technology. I’m passionate about leveraging data-driven insights to address complex challenges, especially in the fields of environmental impact and public policy. With experience in ESG analysis, machine learning, and web development, I thrive on projects that combine technical rigor with meaningful real-world applications. Currently, I'm involved in building solutions that help companies understand and mitigate their carbon footprints, while also pursuing advanced studies in data science. I’m eager to connect with opportunities that push the boundaries of responsible innovation.</p>
-      
-      <h2>Machine Learning</h2>
-      <p>I'm working on developing and optimizing machine learning models that analyze environmental, social, and governance (ESG) data to derive meaningful insights. This involves collaborating with cross-functional teams to create AI-driven solutions that assist decision-makers in tackling sustainability challenges.</p>
-      <p>I am passionate about machine learning as a tool for discovery, insight, and innovation. With a foundation in computer science and practical experience in both research and startups, I love diving into complex datasets to unlock patterns and build predictive models. My recent projects include analyzing sustainability reports using NLP techniques and designing emissions calculators, both of which rely heavily on machine learning algorithms. I am particularly interested in applying ML to environmental challenges, as I believe technology can play a crucial role in shaping a sustainable future.</p>
+      <p class="intro-paragraph" style="color: white;">I'm a tech entrepreneur and startup operator with a passion for the venture ecosystem. With a unique blend of technical expertise and business acumen, I navigate the intersections of artificial intelligence, sustainability, and venture capital to build impactful solutions.</p>
 
-      <h2>International Politics</h2>
-      <p>My interests lie in international politics, with a focus on European and global governance. I’m fascinated by how political institutions adapt in times of change and crisis, and how policy decisions impact not just nations but entire regions. My studies in International and European Politics, alongside my work with the Federation Global Initiative on Psychiatry <a href="https://gip-usa.org/" target="_blank">(FGIP)</a>, have given me deep insights into both theoretical and practical aspects of governance, diplomacy, and international collaboration. I’m particularly interested in the interplay between politics and technology, and how emerging challenges like cybersecurity and sustainability shape international relations in the 21st century. </p>
+      <div class="about-section">
+        <h2><i class="fas fa-rocket"></i> Entrepreneurial Journey</h2>
+        <p>As Co-founder and CTO of Resonate AI, I'm building AI-driven solutions that transform how companies approach sustainability reporting and compliance. My journey into entrepreneurship stems from a desire to create technology that drives both business growth and positive environmental impact.</p>
+        <p>Through my work at Carbon Tag and my current startup, I've developed a deep understanding of the challenges founders face when building and scaling technology companies. This firsthand experience shapes my approach to product development, team leadership, and strategic decision-making.</p>
+      </div>
+
+      <div class="about-section">
+        <h2><i class="fas fa-lightbulb"></i> Venture Perspective</h2>
+        <p>My interest in venture capital emerged naturally from my work with early-stage technology companies. I'm particularly drawn to the unique position VCs occupy in the ecosystem - identifying promising innovations, supporting founders through critical growth stages, and helping shape the technologies that will define our future.</p>
+        <p>I bring a technical operator's perspective to analyzing startups, with particular expertise in evaluating AI/ML applications, sustainability tech, and enterprise SaaS solutions. My background across both technical implementation and business strategy allows me to assess opportunities holistically.</p>
+      </div>
+
+      <div class="about-section">
+        <h2><i class="fas fa-code-branch"></i> Technical Foundation</h2>
+        <p>My technical skills span machine learning, data analysis, and software development. I've led the creation of data pipelines and benchmarking tools for sustainability reporting, designed automated onboarding systems that reduced integration time by 40%, and developed interactive data visualization dashboards for performance tracking.</p>
+        <p>I believe that a solid technical foundation is invaluable in the venture space - enabling deeper diligence of technical claims, better support for portfolio companies, and more strategic perspective on emerging technologies.</p>
+      </div>
+
+      <div class="about-section">
+        <h2><i class="fas fa-globe-americas"></i> Global Perspective</h2>
+        <p>With educational experience across the United States, United Kingdom, and Sweden, and fluency in multiple languages (English, Romanian, Spanish, and German), I bring an international outlook to my work. My studies in International Politics at Edinburgh provided valuable insights into global governance structures that impact business operations worldwide.</p>
+        <p>This global perspective informs my understanding of how technologies scale across different markets and regulatory environments - a critical consideration for startups with international ambitions.</p>
+      </div>
     </div>
 
     <aside class="profile-sidebar">
-      <img src="images/profile.jpg" alt="Antonia Dumitriu Profile Picture" class="profile-img">
+      <img src="images/profile.jpg" alt="Toni Dumitriu Profile Picture" class="profile-img">
       <h2>Toni Dumitriu</h2>
-      <p>MSc. Candidate @ Stockholm University | Co-Founder @ <a href="https://resonateai.co.uk" target="_blank">Resonate AI</a> | Software Developer @ <a href="https://carbontag.org/" target="_blank">CarbonTag</a></p>
+      <div class="profile-detail">
+        <i class="fas fa-briefcase"></i>
+        <span>Co-Founder @ <a href="https://resonateai.co.uk" target="_blank">Resonate AI</a></span>
+      </div>
+      <div class="profile-detail">
+        <i class="fas fa-chart-line"></i>
+        <span>Former Product & Investment Associate @ <a href="https://carbontag.org/" target="_blank">Carbon Tag</a></span>
+      </div>
+      <div class="profile-detail">
+        <i class="fas fa-graduation-cap"></i>
+        <span>MSc Data Science @ Stockholm University</span>
+      </div>
+      <div class="profile-detail">
+        <i class="fas fa-envelope"></i>
+        <span><a href="mailto:adumitriu2000@gmail.com">adumitriu2000@gmail.com</a></span>
+      </div>
 
-      <div class="social-links">
-        <a href="https://github.com/antoniadumitriu" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/tonidumitriu" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:Adumitriu2000@gmail.com"><i class="fas fa-envelope"></i></a>
+      <div class="connect-section">
+        <h3>Let's Connect</h3>
+        <div class="social-links">
+          <a href="https://github.com/antoniadumitriu" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/tonidumitriu" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:adumitriu2000@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="interests-section">
+        <h3>Areas of Interest</h3>
+        <div class="tags">
+          <span class="tag">AI/ML</span>
+          <span class="tag">Climate Tech</span>
+          <span class="tag">Venture Capital</span>
+          <span class="tag">Data Science</span>
+          <span class="tag">Enterprise SaaS</span>
+        </div>
       </div>
     </aside>
   </div>
 
   <footer>
-    <p>&copy; 2024 Antonia Dumitriu</p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>&copy; 2024 Toni Dumitriu</p>
+          <p>Web Development Lead @ <a href="https://gip-usa.org/" target="_blank">Federation Global Initiative on Psychiatry</a></p>
+        </div>
+        <div class="social-links footer-social">
+          <a href="https://github.com/antoniadumitriu" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/tonidumitriu" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:adumitriu2000@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/script.js"></script>

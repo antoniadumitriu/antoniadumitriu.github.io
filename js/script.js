@@ -1,38 +1,85 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let lastScroll = 0;
-    const header = document.querySelector("header");
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('header');
   
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
-  
-      if (currentScroll > lastScroll && currentScroll > 100) {
-        // Scrolling down
-        document.body.classList.add("scrolled-down");
-        document.body.classList.remove("scrolled-up");
-      } else if (currentScroll < lastScroll) {
-        // Scrolling up
-        document.body.classList.add("scrolled-up");
-        document.body.classList.remove("scrolled-down");
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
       }
-  
-      lastScroll = currentScroll;
-    });
-  
-    // Apply smooth scrolling for navigation links
-    const links = document.querySelectorAll("nav ul li a");
-    links.forEach(link => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const targetId = link.getAttribute("href").substring(1);
-        const targetSection = document.getElementById(targetId);
-  
-        if (targetSection) {
-          window.scrollTo({
-            top: targetSection.offsetTop,
-            behavior: "smooth"
-          });
-        }
-      });
     });
   });
-  
+
+  // Animate elements on scroll
+  const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.experience-card, .skill-category, .education-item');
+    
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight * 0.9) {
+        element.classList.add('animated');
+      }
+    });
+  };
+
+  // Add animated class to CSS-targeted elements
+  document.querySelectorAll('.experience-card, .skill-category, .education-item').forEach(el => {
+    el.classList.add('fade-in-element');
+  });
+
+  window.addEventListener('scroll', animateOnScroll);
+  animateOnScroll(); // Run once on page load
+
+  // Add interactive hover effect to skill tags
+  const tags = document.querySelectorAll('.tag');
+  if (tags) {
+    tags.forEach(tag => {
+      tag.addEventListener('mouseover', function() {
+        this.style.transform = 'translateY(-5px)';
+      });
+      
+      tag.addEventListener('mouseout', function() {
+        this.style.transform = 'translateY(0)';
+      });
+    });
+  }
+
+  // Typewriter effect for tagline if on home page
+  const tagline = document.querySelector('.tagline');
+  if (tagline) {
+    const text = tagline.textContent;
+    tagline.textContent = '';
+    
+    let i = 0;
+    const typeWriter = () => {
+      if (i < text.length) {
+        tagline.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    };
+    
+    setTimeout(() => {
+      typeWriter();
+    }, 1000);
+  }
+});
